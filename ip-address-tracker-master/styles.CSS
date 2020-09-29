@@ -34,3 +34,11 @@ h1 {
   padding: 15px;
   letter-spacing: -0.013em;
 }
+#searchBtn {
+  background: #000000;
+  margin-left: -54px;
+  padding: 18.5px 21.5px;
+  background: black;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+}
