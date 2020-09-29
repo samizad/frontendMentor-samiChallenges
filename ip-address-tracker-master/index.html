@@ -17,10 +17,14 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
   </head>
@@ -30,9 +34,11 @@
       <form id="search">
         <input
           type="text"
-          class="searchInput"
-          placeholder="search for any Ip address or domain"
+          class="search-bar"
+          aria-label="Search"
+          placeholder="Search for any IP address or domain"
         />
+
         <button id="searchBtn" type="submit">
           <img src="./images/icon-arrow.svg" alt="icon arrow" />
         </button>
@@ -67,24 +73,13 @@
     <main class="map" id="mapId"></main>
 
     <div id="map" style="width: 400px; height: 300px;"></div>
-    <script>
-      // TO MAKE THE MAP APPEAR YOU MUST
-      // ADD YOUR ACCESS TOKEN FROM
-      // https://account.mapbox.com
-      mapboxgl.accessToken = "<your access token here>";
-      var map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9, // starting zoom
-      });
-    </script>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
-    <script src="./app.js" type="text/javascript"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
