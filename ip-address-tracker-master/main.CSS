@@ -1,1 +1,36 @@
-DF
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+body {
+  width: 100vw;
+  font-family: "Rubik", sans-serif;
+}
+header {
+  background-image: url("./images/pattern-bg.png");
+}
+h1 {
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 500 !important;
+  font-size: 30px !important;
+  color: #ffffff;
+  letter-spacing: -0.008 rem;
+}
+#search {
+  display: flex;
+  width: min(calc(100vw - 3rem), 555px);
+  margin: 21px auto 24px;
+}
+.search-bar {
+  border: none;
+  padding: 18px 8px 20px;
+  width: 100%;
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  padding: 15px;
+  letter-spacing: -0.013em;
+}
