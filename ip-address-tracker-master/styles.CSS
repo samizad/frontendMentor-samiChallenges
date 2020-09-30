@@ -8,6 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
 }
 header {
+  height: 300px;
   background-image: url("./images/pattern-bg.png");
 }
 h1 {
@@ -41,4 +42,98 @@ h1 {
   background: black;
   border: none;
   border-radius: 0 1rem 1rem 0;
+}
+#search-btn:hover {
+  cursor: pointer;
+  background-color: #959595;
+}
+.info {
+  border-radius: 1rem;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 10%;
+  background: #ffffff;
+  border-radius: 5 erm;
+  width:330px;
+  padding: 25px;
+  height: 300px;
+}
+
+h2 {
+  font-weight: bold !important;
+  font-size: 11px !important;
+  line-height: 176%; /* or 19px */
+  text-align: center;
+  letter-spacing: 0.087em;
+  color: #949494;
+  margin-top: 18px;
+}
+h3 {
+  font-weight: 500 !important;
+  margin-top: 4px;
+  font-size: 20px !important;
+  line-height: 121%; /* or 24px */
+  text-align: center;
+  letter-spacing: -0.00299999em;
+  color: #000000;
+}
+.map {
+  width: 100vw;
+  height: 80vh;
+  z-index: -1;
+}
+.attribution {
+  font-size: 1;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(40, 40, 40);
+}
+.attribution a {
+  text-decoration: none;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5e84f0 0.22%, #4660a9 105.73%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width:1115px){
+    header{
+        height: 279px;
+    }
+    #search{
+        margin: 27px auto 48px;
+    }
+    .search-bar{
+        padding-left: 24px;
+    }
+    .info{
+        height: 161px;
+        bottom: -80px;
+        padding: 32px 32px 32px 0;
+        width: 1110px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .data{
+        margin-left: 32px;
+        border-right: 1px solid #949494;;
+    }
+    .data:last-of-type{
+        border-right: none;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        margin-top: 0;
+        font-size: 13px;
+        text-align: left;
+    }
+    h3{
+        margin-top: 9px;
+        font-size: 26px;
+        text-align: left;
+    }
 }
