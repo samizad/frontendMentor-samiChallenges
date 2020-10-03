@@ -1,0 +1,72 @@
+<body>
+  <div class="image-slider">
+    <div class="image-container" id="img-con">
+      <img src="./images/a.png" alt="" />
+    </div>
+
+    <!-- control buttons -->
+    <div class="btn-left" id="prev">
+      <img src="./images/icon-prev.svg" />
+    </div>
+    <div class="btn-right" id="next">
+      <img src="./images/icon-next.svg" />
+    </div>
+  </div>
+  <!-- css style -->
+  <style>
+    .image-slider {
+      width: 70%;
+      height: 500px;
+      margin: 50px;
+      border: 10px solid #009696;
+      position: relative;
+      box-shadow: 0px 0px 10px 2ox grey;
+    }
+    .image-slider img {
+      width: 100%;
+      height: 100%;
+    }
+    .btn-left,
+    .btn-right {
+      position: absolute;
+      top: 45%;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .btn-left {
+      left: 0px;
+    }
+    .btn-right {
+      right: 0px;
+    }
+    .btn-left:hover,
+    .btn-right:hover {
+      background-color: #0096;
+    }
+  </style>
+
+  <!-- add JavaScript -->
+  <script>
+    const img_con = document.getElementById("img-con");
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+    const images = ["a.png", "b.png"];
+
+    let i = images.length;
+
+    // function for next
+
+    next.onclick = () => {
+      i = i < images.length ? (i = i + 1) : (i = 1);
+      img_con.innerHTML =
+        "<img  class='img' src=./../images/" + images[i - 1] + ">";
+    };
+
+    // function for prev
+    prev.onclick = () => {
+      i = i < images.length + 1 && i > 1 ? (i = i - 1) : (i = images.length);
+      img_con.innerHTML =
+        "<img  class='img' src=./../images/" + images[i - 1] + ">";
+    };
+  </script>
+</body>
