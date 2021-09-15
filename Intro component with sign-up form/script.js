@@ -25,7 +25,6 @@ const checkRequired = (inputArr) => {
             showErrorMessage(input , getFieldName(input) +"  " + "cannot be empty")
              //icon error    
              var erIcon = document.querySelectorAll(".iconError")
-
              for (var i = 0; i < erIcon.length; i++) {
                 erIcon[i].style.visibility = "visible";;
              }    
@@ -49,20 +48,15 @@ const checkRequired = (inputArr) => {
         else
         {
             showSuccessMessage(input);
-            //
+            //hide icon
             var erIcon = document.querySelectorAll(".iconError")
-
-             for (var i = 0; i < erIcon.length; i++) {
-                
+             for (var i = 0; i < erIcon.length; i++) {               
                 erIcon[i].style.display = "none";
-                            }   
-            
-            //change border color &hide icon
+                            }            
+            //change border color
             if (input.value != ""){
-                input.classList.add("validInput")
-                
-            }      
-       
+                input.classList.add("validInput")     
+            }             
     }
     });
 }
