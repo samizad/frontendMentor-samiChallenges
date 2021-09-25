@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+      background-attachment: fixed;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+    .container{
+      background-color: white;
+      margin:110px 250px;
+      width:1000px ;
+      height: 600px;
+      border: 2px;
+      border-radius: 25px;
+      display: flex;
+      overflow: hidden;
+      
+    }
+    .woman-online{
+    
+    padding-top: 70px;
+    width: 50%;
+  
+    }
+    .woman-img{
+     
+      margin-left: -50px;
+
+    }
+    .bg-img{
+  top:-155px;
+    position: absolute;
+    right:45%
+    }
+    .box-img{
+      position: absolute;
+    top: 50%;
+    margin-left: -92px;
+    }
+    .faq{
+      width: 50%;
+    }
+    h3{
+      font-size: 3.2rem;
+      text-align: left;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    .faq{
+      padding: 2rem 2rem 5rem 2rem;
+    }
+    .faqBtn{
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 40px 15px 0px;
+    margin-top: 10px;
+    border-bottom: 1px solid  hsl(237, 12%, 33%);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-align: left;
+} 
+    span{
+      padding-right: 100px;
+      width: 100%;
+    }
+    .faqBtn:hover{
+      color:hsl(14, 88%, 65%);
+    }
+    .iconArr{
+      position: absolute;
+      right: 10px;
+    }
+    .faqBtn:active{
+      transform: translateY(-50%);
+    }
+    dd{
+      margin-left: 0px;
+      display: none;
+    }
+.iconArrActive{
+  transform: translateY(-50%);
+}
+.iconRotate{
+  transform: rotate(180deg);
+  } 
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="woman-online">
+        <div class="woman-img">
+          <img src="./images/illustration-woman-online-desktop.svg" alt="">
+        </div>
+        <div class="bg-img">
+          <img src="./images/bg-pattern-desktop.svg" alt="">
+        </div>
+        <div class="box-img">
+          <img src="./images/illustration-box-desktop.svg" alt="">
+        </div>
+
+      </div>
+     <dl class="faq">
+       <h3>FAQ</h3>
+       <dt class="FAQItem">
+         <button class="faqBtn">
+         <span>How many team members can I invite?</span> 
+          <img id="icon-second" class="iconArr" src="./images/icon-arrow-down.svg" >
+         </button>
+       </dt>
+       <dd>
+        You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.
+       </dd>
+       <dt class="FAQItem" >
+        <button class="faqBtn" id="FAQItemID">
+        <span>What is the maximum file upload size?</span> 
+         <img id="icon-second" class="iconArr" src="./images/icon-arrow-down.svg" >
+        </button>
+      </dt>
+      <dd>
+        No more than 2GB. All files in your account must fit your allotted storage space.
+      </dd>
+      <dt class="FAQItem">
+        <button class="faqBtn">
+        <span>How do I reset my password?</span> 
+         <img id="icon-second" class="iconArr" src="./images/icon-arrow-down.svg" >
+        </button>
+      </dt>
+      <dd>
+        Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.
+      </dd>
+      <dt class="FAQItem">
+        <button class="faqBtn">
+        <span>Can I cancel my subscription?</span> 
+         <img id="icon-second" class="iconArr" src="./images/icon-arrow-down.svg" >
+        </button>
+      </dt>
+      <dd>
+        Yes! Send us a message and we’ll process your request no questions asked.
+      </dd>
+      <dt class="FAQItem">
+        <button class="faqBtn">
+        <span>Do you provide additional support?</span> 
+         <img id="icon-second" class="iconArr" src="./images/icon-arrow-down.svg" >
+        </button>
+      </dt>
+      <dd>
+        Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      </dd>
+     </dl>
+      </div>
+  </div>
+  <script>
+    const element  =  document.getElementsByClassName("FAQItem");
+    for (let i=0; i<element.length; i++){
+      element[i].addEventListener("click", function() {
+      let allChildren = element[i].querySelectorAll("button img");
+      allChildren.forEach(item => item.classList.add("iconRotate"));
+      /////
+      let dd = this.nextElementSibling;
+      if (dd.style.display === 'block') {
+        dd.style.display = 'none';
+      }
+      else {
+        dd.style.display = 'block';
+        for(let j=0;j<element.length;j++){
+            if(this.classList != element[j].classList){
+              let allImgChildren = element[i].querySelectorAll("button img");
+              allImgChildren.forEach(item => item.classList.remove("iconRotate"));
+              element[j].nextElementSibling.style.display = 'none';  
+            }
+        }
+        
+      }
+    })
+    
+  }
+  </script>
+</body>
+</html>
