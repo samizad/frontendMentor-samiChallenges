@@ -1,14 +1,11 @@
 {
-  "name": "test-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tailwindcss build tailwind.css -o style.css",
-    "watch": "tailwindcss build tailwind.css -o style.css -w"
-  },
+  "name": "signupform",
+  "version": "1.0.1",
+  "description": "this a singUp form with tailwind and a little JavaScript",
+  "main": "index.html",
+  "scripts": {},
   "keywords": [],
-  "author": "",
+  "author": "Sami Zad <samiraghadirzad@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.2.6",

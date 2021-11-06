@@ -1,12 +1,12 @@
 .invalidInput {
-  border-color: red !important;
+  border-color: red;
 }
 .validInput {
-  border-color: gray !important;
+  border-color: gray;
 }
 .emailInvalidInput::-webkit-input-placeholder {
-  color: red !important;
+  color: red;
 }
 .icon {
-  visibility: hidden !important;
+  visibility: hidden;
 }
